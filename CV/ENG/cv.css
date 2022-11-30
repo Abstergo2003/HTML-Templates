@@ -1,0 +1,75 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #e5e5e5;
+}
+.wrapper {
+    width: 65vw;
+    background-color:white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+aside {
+    width: 370px;
+    background-color: #1E2939;
+    height: 100%;
+    display: block;
+}
+.profile {
+    width: 300px;
+    border: solid;
+    border-radius: 50%;
+    border-color:transparent;
+    border-width: 1vw;
+}
+h3 {
+    color:#1E2939;
+    margin-left: 6.5vw;
+}
+h1 {
+    color:#1E2939;
+    margin-left: 5vw;
+}
+h2 {
+    color:#1E2939;
+    margin-left: 5vw;
+}
+p {
+    color:gray;
+    margin-left: 8vw;
+    margin-right: 4vw;
+}
+ul {
+    color:#1E2939;
+}
+li {
+    color: orange;
+}
+.element {
+    margin-left: 0;
+    padding: 0;
+}
+.list {
+    margin-left: 8vw;
+}
+.list2 {
+    margin-left: 3vw;
+}
+.skills {
+    margin-left: 1.5vw;
+    color:white;
+}
+.contacts {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: 0;
+}
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: 0; 
+}
