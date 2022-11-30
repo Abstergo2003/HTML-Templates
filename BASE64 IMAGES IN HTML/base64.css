@@ -1,0 +1,15 @@
+body {
+    font-family: "Oxanium", cursive;
+    background: #e5e5e5;
+}
+.wrapper {
+    background-color:white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin: 0 auto;
+}
+p {
+    text-align: center;
+    color:gray;
+}
