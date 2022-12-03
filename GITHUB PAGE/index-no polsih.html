@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatibile" content="IE-edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Abstergo2003</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="style.css" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;700&display=swap" rel="stylesheet">
+
+        </head>    
+    <body>
+        <div class="wrapper">
+          <main>
+            <div class="content contentEnglish">
+              <div class="starting-div">
+                  <a href="polska.html" class="language-a"><image src="poland.png" class="language"></image></a>
+                  <div class="title">
+                    <b>Abstergo2003's</b> projects
+                  </div>
+                  <div class="second-title">
+                      Welcome to my page
+                  </div>
+                  <p class="under-title">
+                      All my projects may be found here
+                  </p>
+                  <image src="profile.jpg" class="profile"></image>
+                  <p class="second-title">
+                      Enjoy
+                  </p>
+              </div>
+                  
+                  <div class="slider">
+                    <a href="#slide-1" class="navigation-button">1</a>
+                    <a href="#slide-2" class="navigation-button">2</a>
+                    <a href="#slide-3" class="navigation-button">3</a>
+                    <a href="#slide-4" class="navigation-button">4</a>
+                    <a href="#slide-5" class="navigation-button">5</a>
+                    <div class="slides">
+                      <div id="slide-1">
+                        <image src="DnDBot.png" class="desc-pic"></image>
+                        <div class="slide-title1"><b>DnDBot</b></div>
+                        <p class="slide-desc">This bot contains DnD features! You can: throw dices, create channels for your own games (role 'game-master' needed, ask admin), invite people to play with you, play ambient sounds and much more!!!</p>
+                        <a href="#dndbot"><div class="slide-button">Learn More</div></a>
+                      </div>
+                      <div id="slide-2">
+                        <image src="DnDBot.png" class="desc-pic"></image>
+                        <div class="slide-title2"><b>SpottedBot</b></div>
+                        <p class="slide-desc">This is bot that creates spotted infrascturcture on your dc server!!! Now you are able to send anonymous messages to your server!!!</p>
+                        <a href="#spottedbot"><div class="slide-button">Learn More</div></a>
+                      </div>
+                      <div id="slide-3">
+                        <image src="BackUpBot.png" class="desc-pic"></image>
+                        <div class="slide-title3"><b>BackUpBot</b></div>
+                        <p class="slide-desc">Thanks to this BackUpBot since now all message sent on your server are copied into safe database so you can get them back any time you want!!!</p>
+                        <a href="#backupbot"><div class="slide-button">Learn More</div></a>
+                      </div>
+                      <div id="slide-4">
+                        <image src="DnDBot.png" class="desc-pic"></image>
+                        <div class="slide-title4"><b>ModeratorBot</b></div>
+                        <p class="slide-desc">Moderator Bot provides you with shedulding streams, live chat only for stream purpose (closes after stream ended), and beautiful backup of those chats. Also has built in message filters.</p>
+                        <a href="#moderatorbot"><div class="slide-button">Learn More</div></a>
+                      </div>
+                      <div id="slide-5">
+                        <image src="HTML.png" class="desc-pic2"></image>
+                        <div class="slide-title5"><b>HTML Templates</b></div>
+                        <p class="slide-desc">This repository contains various HTML templates (for example CV). You can freely download and edit them, without atrributing any work to me. You can also find there this site files!!!</p>
+                        <a href="#htmltemplates"><div class="slide-button">Learn More</div></a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div id="dndbot" class="dndbot">
+                    <a class="title2"><b>DnDBot</b></a>
+                  </div>
+                  <image src="DnDBot.png" class="pic"></image>
+                  <p class="desc">This bot contains <b>DnD features!</b> You can: throw dices, create channels for your own games (role 'game-master' needed, ask admin)
+                    and invite people to play with you!<br><br>
+                    
+                    To create game room (role 'game-master' needed)<br>
+                    1. type /sgame 'name of game' to create your own channel and voice channel<br>
+                    2. to add people type /add @'nick' (don’t worry no one else than you wont be able to add or remove people)<br>
+                    3. to remove people type /remove @'nick'<br>
+                    4. to end game (and delete channel) type /dgame on this channel<br>
+                    <br>
+                    There exists special channel visible only for people wanting to play (having role 'invite-me')<br>
+                    1. To get this role type /waiting<br>
+                    2. To remove this role type /notwaiting<br>
+                    <br>
+                    Reacting to message sent on 'class' channel will give you role depending on your reaction<br>
+                    (use as favourite class marker)<br>
+                    1. to remove role (favourite class) type /del 'Role' (mind capital letters)<br>
+                    <br>
+                    To throw dices<br>
+                    1. To dice 4 use /d4<br>
+                    2. To dice any other number use analogic command<br>
+                    3. Available dices 4,6,8,10,12,20,100<br>
+                    4. To throw multiple dices use /md4 "count" (analogical every other dice)<br>
+                    5. To throw custom dice type /cd "max value" (when using /mcd "max value" "count")<br>
+                    6. Every number has assigned color<br>
+                    <br>
+                    Randomizers:<br>
+                    /rfight generates random fight with random opponent, to see scheme type !fhelp<br>
+                    /rmeet generates random side quest (his beginning), to see scheme type !mhelp<br>
+                    /rdeath 'user' chooses random death for user (in ‘user’ field you can type whatever you want), to see scheme type !dhelp<br>
+                    /rmname genrates random male name<br>
+                    /rfname genrates random female name<br>
+                    <a href="https://github.com/Abstergo2003/DnD-Bot" style="text-decoration:none; -webkit-tap-highlight-color: none;color: #ABABAB" target="_blank">
+                      <div class="hyperlink">Repository Link</div>
+                    </a>
+                  </p>
+                    
+                    
+                  <div id="spottedbot" class="dndbot">
+                    <a class="title2"><b>SpottedBot</b></a>
+                  </div>
+                  <image src="DnDBot.png" class="pic"></image>
+                  <p class="desc">This is bot that creates spotted infrascturcture on your dc server
+                    when it joins it creates 2 channels and 1 role<br>
+                    <br>
+                    1. Spotted channel<br>	
+                    - bot sends here anonymous messages after command /spotted was used by member<br>
+                    <br>
+                    2. Logs channel<br>	
+                    - only administrator can see this channel<br>
+                    - here are gathered logs of spotted such as author and his message including attachment<br>
+                    - this is your only way to punish trolls<br>
+                    <br>
+                    3. Damn Troll role	<br>
+                    - as any one on server can use spotted bot creates role to mark users banned from using spotted (both of them)<br>
+                    <br>
+                    ##################################################################<br>
+                    Other commands<br>
+                    <br>
+                    /rc - recreates post, logs and spotted channel (in case of admin betrayal)(recreated channel doesn't contain previous messages)<br>
+                    <br>
+                    /cl - in other words clean message - it may happen that mute reminder will not be deleted so with this command you can delete bulk messages<br>
+                    <br>
+                    /nsfw - its addon that creates spotted nsfw channels<br>
+                    <br>
+                    /add-banned-word - adds word of your chosing to ban<br>
+                    ##################################################################<br>
+                    /nsfw addon<br>
+                    <br>
+                    Creates one channel and one role:<br>
+                    1. nsfw channel - its just like spotted but for nsfw materials (hidden for every one without role)<br>
+                    2. nsfw spotter role - eneables people to use nsfw addon's channel (decide yourself who should have it)<br>
+                      <a href="https://github.com/Abstergo2003/spotted-bot-worldwide" style="text-decoration:none; -webkit-tap-highlight-color: none;color: #ABABAB" target="_blank">
+                        <div class="hyperlink">Repository Link</div>
+                      </a>
+                    </p>
+
+                    <div id="backupbot" class="dndbot">
+                      <a class="title2"><b>BackUpBot</b></a>
+                    </div>
+                    <image src="BackUpBot.png" class="pic"></image>
+                    <p class="desc">This is BackUp Bot since now all message sent on your server are copied into safe database so you can get them back any time you want<br>
+                    <br>
+                    Commands:<br>
+                    /gbackup - generates a raw backup file for you, it contains text of message, sender's id, and his profile pic URL(gonna need this later)<br>
+                    /bbackup - generates beautiful backup file (in html) so it looks exactly the same as normal chat (thats why i needed the profile pic URL)<br>
+                    !!! BackUp files are sent only to owner of server !!!<br>
+                    <br>
+                    Events:<br>
+                    Every Sunday you will be sent a raw backup file<br>
+                      <a href="https://github.com/Abstergo2003/BackUpBot" style="text-decoration:none; -webkit-tap-highlight-color: none;color: #ABABAB" target="_blank">
+                        <div class="hyperlink">Repository Link</div>
+                      </a>
+                    </p>
+                    
+                    
+                    <div id="moderatorbot" class="dndbot">
+                      <a class="title2"><b>ModeratorBot</b></a>
+                    </div>
+                    <image src="BackUpBot.png" class="pic"></image>
+                    <p class="desc">This is Moderator Bot, it provides you with shedulding streams, live chat only for stream purpose (closes after stream ended), and beautiful backup of those chats.<br>
+                      <br>
+                      Commands:<br>
+                      /mshed - shedulde your next stream giving hour and minutes count for bot to wait<br>
+                      /cstream - cancells your all next streams<br>
+                      /muse - use your preset to imediatelly send message to channel<br>
+                      /mend - ends stream, waits 2 hours, deletes clears live chat channel, and sends backup of it.<br>
+                      <br>
+                      Self Used:<br>
+                      /moderator - you use it every time you send message on every channel, it filters messages for swears and deletes them, if found<br>
+                      /save - save messages sent on live-chat channel<br>
+                      !!! BackUp files are sent to new live-chat channel !!!<br>
+                      <a href="https://github.com/Abstergo2003/Moderator-Bot" style="text-decoration:none; -webkit-tap-highlight-color: none;color: #ABABAB" target="_blank">
+                        <div class="hyperlink">Repository Link</div>
+                      </a>
+                    </p>
+                    
+                    <div id="htmltemplates" class="dndbot">
+                      <a class="title2"><b>HTML Templates</b></a>
+                    </div>
+                    <image src="HTML.png" class="pic2"></image>
+                    <p class="desc">This repository contains various HTML templates (for example CV). You can freely download and edit them, without atrributing any work to me.<br>
+                    <br>
+                    In each folder is polish and english version of template, there is html file containing fields description and one filled with random data (every similarities to real persons is random and not planned)<br>
+                    <br>
+                    Becarefull since you need just a little of brain power to adapt every template to your needs.<br>
+                    Remember, if you insert any picture in html you need to send it as well, or just link it from some site. You dont need though to send css file since I incorporated it in html, its just there for easier edition.<br>
+                    <br>
+                    I hope it will come in handy for you some day.<br>
+                      <a href="https://github.com/Abstergo2003/HTML-Templates" style="text-decoration:none; -webkit-tap-highlight-color: none;color: #ABABAB" target="_blank">
+                        <div class="hyperlink">Repository Link</div>
+                      </a>
+                    </p>
+            </div>
+          </main>
+
+        </div>
+    </body>
+</html>
