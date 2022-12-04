@@ -21,25 +21,11 @@
           <main>
               <div class="diva" style="width: 100%;height: 100%;background-color: #222322;"><div class="title">
                 <b>Abstergo2003</b>
-              </div><image src="britain.png" class="language2"></image><input type="checkbox" id="myCheck" onclick="myFunction()" class="checkbox"><image src="poland.png" class="language"></image></div>
-              <script>
-                function myFunction() {
-                  // Get the checkbox
-                  var checkBox = document.getElementById("myCheck");
-                  // Get the output text
-                  var text = document.getElementById("polska");
-                  var text2 = document.getElementById("anglia");
-                
-                  // If the checkbox is checked, display the output text
-                  if (checkBox.checked == true){
-                    text.style.display = "block";
-                    text2.style.display = "none";
-                  } else {
-                    text.style.display = "none";
-                    text2.style.display = "block";
-                  }
-                }
-              </script>
+              </div><image src="britain.png" class="language2"></image><input type="checkbox" id="myCheck" onclick="swap()" class="checkbox"><image src="poland.png" class="language"></image></div>
+              
+              <script src="swap.js"></script>
+              
+              
               <div id="anglia" style="display:block"><div class="starting-div">
                   
                   <div class="second-title">
@@ -55,41 +41,81 @@
                 </div>
                   
                   <div class="slider">
-                    <a href="#slide-1" class="navigation-button">1</a>
-                    <a href="#slide-2" class="navigation-button">2</a>
-                    <a href="#slide-3" class="navigation-button">3</a>
-                    <a href="#slide-4" class="navigation-button">4</a>
-                    <a href="#slide-5" class="navigation-button">5</a>
+                    <a id="nav1" href="#slide-1" class="navigation-button" onclick="color(this.id)">1</a>
+                    <a id="nav2" href="#slide-2" class="navigation-button" onclick="color(this.id)">2</a>
+                    <a id="nav3" href="#slide-3" class="navigation-button" onclick="color(this.id)">3</a>
+                    <a id="nav4" href="#slide-4" class="navigation-button" onclick="color(this.id)">4</a>
+                    <a id="nav5" href="#slide-5" class="navigation-button" onclick="color(this.id)">5</a>
                     <div class="slides">
                       <div id="slide-1">
-                        <image src="DnDBot.png" class="desc-pic"></image>
-                        <div class="slide-title1"><b>DnDBot</b></div>
-                        <p class="slide-desc">This bot contains DnD features! You can: throw dices, create channels for your own games (role 'game-master' needed, ask admin), invite people to play with you, play ambient sounds and much more!!!</p>
-                        <a href="#dndbot"><div class="slide-button">Learn More</div></a>
+                        <table>
+                          <tr>
+                            <td style="width:29vw; height:39vw">
+                              <img src="DnDBot.png" class="desc-pic">
+                            </td>
+                            <td style="width:29vw; height:39vw">
+                              <span class="slide-title1">DnDBot</span>
+                              <p style="font-size: 2vw; color:#ABABAB; padding-right: 1vw">This bot contains DnD features! You can: throw dices, create channels for your own games (role 'game-master' needed, ask admin), invite people to play with you, play ambient sounds and much more!!!</p>
+                              <a href="#dndbot"><div class="slide-button">Learn More</div></a>
+                            </td>
+                          </tr>
+                        </table>
                       </div>
                       <div id="slide-2">
-                        <image src="SpottedBot.png" class="desc-pic"></image>
-                        <div class="slide-title2"><b>SpottedBot</b></div>
-                        <p class="slide-desc">This is bot that creates spotted infrascturcture on your dc server!!! Now you are able to send anonymous messages to your server!!!</p>
-                        <a href="#spottedbot"><div class="slide-button">Learn More</div></a>
+                        <table>
+                          <tr>
+                            <td style="width:29vw; height:39vw">
+                              <img src="SpottedBot.png" class="desc-pic">
+                            </td>
+                            <td style="width:29vw; height:39vw">
+                              <span class="slide-title1">SpottedBot</span>
+                              <p style="font-size: 2vw; color:#ABABAB; padding-right: 1vw">This is bot that creates spotted infrascturcture on your dc server!!! Now you are able to send anonymous messages to your server!!!</p>
+                              <a href="#spottedbot"><div class="slide-button">Learn More</div></a>
+                            </td>
+                          </tr>
+                        </table>
                       </div>
                       <div id="slide-3">
-                        <image src="BackUpBot.png" class="desc-pic"></image>
-                        <div class="slide-title3"><b>BackUpBot</b></div>
-                        <p class="slide-desc">Thanks to this BackUpBot since now all message sent on your server are copied into safe database so you can get them back any time you want!!!</p>
-                        <a href="#backupbot"><div class="slide-button">Learn More</div></a>
+                        <table>
+                          <tr>
+                            <td style="width:29vw; height:39vw">
+                              <img src="BackUpBot.png" class="desc-pic">
+                            </td>
+                            <td style="width:29vw; height:39vw">
+                              <span class="slide-title1">BackUpBot</span>
+                              <p style="font-size: 2vw; color:#ABABAB; padding-right: 1vw">Thanks to this BackUpBot since now all message sent on your server are copied into safe database so you can get them back any time you want!!!</p>
+                              <a href="#backupbot"><div class="slide-button">Learn More</div></a>
+                            </td>
+                          </tr>
+                        </table>
                       </div>
                       <div id="slide-4">
-                        <image src="ModeratorBot.png" class="desc-pic"></image>
-                        <div class="slide-title4"><b>ModeratorBot</b></div>
-                        <p class="slide-desc">Moderator Bot provides you with shedulding streams, live chat only for stream purpose (closes after stream ended), and beautiful backup of those chats. Also has built in message filters.</p>
-                        <a href="#moderatorbot"><div class="slide-button">Learn More</div></a>
+                        <table>
+                          <tr>
+                            <td style="width:29vw; height:39vw">
+                              <img src="ModeratorBot.png" class="desc-pic">
+                            </td>
+                            <td style="width:29vw; height:39vw">
+                              <span class="slide-title1">ModeratorBot</span>
+                              <p style="font-size: 2vw; color:#ABABAB; padding-right: 1vw">Moderator Bot provides you with shedulding streams, live chat only for stream purpose (closes after stream ended), and beautiful backup of those chats. Also has built in message filters.</p>
+                              <a href="#moderatorbot"><div class="slide-button">Learn More</div></a>
+                            </td>
+                          </tr>
+                        </table>
                       </div>
                       <div id="slide-5">
-                        <image src="HTML.png" class="desc-pic2"></image>
-                        <div class="slide-title5"><b>HTML Templates</b></div>
-                        <p class="slide-desc">This repository contains various HTML templates (for example CV). You can freely download and edit them, without atrributing any work to me. You can also find there this site files!!!</p>
-                        <a href="#htmltemplates"><div class="slide-button">Learn More</div></a>
+                        <table>
+                          <tr>
+                            <td style="width:29vw; height:39vw">
+                              <img src="HTML.png" class="desc-pic">
+                            </td>
+                            <td style="width:29vw; height:39vw">
+                              <span class="slide-title1">HTML Templates</span>
+                              <p style="font-size: 2vw; color:#ABABAB; padding-right: 1vw">This repository contains various HTML templates (for example CV). You can freely download and edit them, without atrributing any work to me. You can also find there this site files!!!</p>
+                              <a href="#htmltemplates"><div class="slide-button">Learn More</div></a>
+                            </td>
+                          </tr>
+                        </table>
                       </div>
                     </div>
                   </div>
@@ -238,6 +264,7 @@
 
 
             <div id="polska" style="display:none"><div class="starting-div">
+                  
               <div class="second-title">
                   Witaj na mojej stronie
               </div>
@@ -248,44 +275,84 @@
               <p class="second-title">
                   Miłej zabawy
               </p>
-          </div>
+            </div>
               
               <div class="slider">
-                <a href="#slide-6" class="navigation-button">1</a>
-                <a href="#slide-7" class="navigation-button">2</a>
-                <a href="#slide-8" class="navigation-button">3</a>
-                <a href="#slide-9" class="navigation-button">4</a>
-                <a href="#slide-10" class="navigation-button">5</a>
+                <a id="nav6" href="#slide-6" class="navigation-button" onclick="color2(this.id)">1</a>
+                <a id="nav7" href="#slide-7" class="navigation-button" onclick="color2(this.id)">2</a>
+                <a id="nav8" href="#slide-8" class="navigation-button" onclick="color2(this.id)">3</a>
+                <a id="nav9" href="#slide-9" class="navigation-button" onclick="color2(this.id)">4</a>
+                <a id="nav10" href="#slide-10" class="navigation-button" onclick="color2(this.id)">5</a>
                 <div class="slides">
                   <div id="slide-6">
-                    <image src="DnDBot.png" class="desc-pic"></image>
-                    <div class="slide-title1"><b>DnDBot</b></div>
-                    <p class="slide-desc">Ten bot zawiera ulepszenia do DnD! Możesz: rzucać kostką, tworzyć własne kanały dla swoich gier (tylko dla posiadaczy specjalnej roli, pytaj admina),zapraszać ludzi by z tobą zagrali, grać klimatyczną muzykę i wiele więcej!!!</p>
-                    <a href="#dndbot2"><div class="slide-button">Więcej</div></a>
+                    <table>
+                      <tr>
+                        <td style="width:29vw; height:39vw">
+                          <img src="DnDBot.png" class="desc-pic">
+                        </td>
+                        <td style="width:29vw; height:39vw">
+                          <span class="slide-title1">DnDBot</span>
+                          <p style="font-size: 2vw; color:#ABABAB; padding-right: 1vw">Ten bot zawiera ulepszenia do DnD! Możesz: rzucać kostką, tworzyć własne kanały dla swoich gier (tylko dla posiadaczy specjalnej roli, pytaj admina),zapraszać ludzi by z tobą zagrali, grać klimatyczną muzykę i wiele więcej!!!</p>
+                          <a href="#dndbot2"><div class="slide-button">Więcej</div></a>
+                        </td>
+                      </tr>
+                    </table>
                   </div>
                   <div id="slide-7">
-                    <image src="SpottedBot.png" class="desc-pic"></image>
-                    <div class="slide-title2"><b>SpottedBot</b></div>
-                    <p class="slide-desc">Ten bot tworzy infrastrukturę spotted na twoim serwerze, teraz możesz wysyłać anonimowe wiadomości na serwer</p>
-                    <a href="#spottedbot2"><div class="slide-button">Więcej</div></a>
+                    <table>
+                      <tr>
+                        <td style="width:29vw; height:39vw">
+                          <img src="SpottedBot.png" class="desc-pic">
+                        </td>
+                        <td style="width:29vw; height:39vw">
+                          <span class="slide-title1">SpottedBot</span>
+                          <p style="font-size: 2vw; color:#ABABAB; padding-right: 1vw">Ten bot tworzy infrastrukturę spotted na twoim serwerze, teraz możesz wysyłać anonimowe wiadomości na serwer!!!</p>
+                          <a href="#spottedbot2"><div class="slide-button">Więcej</div></a>
+                        </td>
+                      </tr>
+                    </table>
                   </div>
                   <div id="slide-8">
-                    <image src="BackUpBot.png" class="desc-pic"></image>
-                    <div class="slide-title3"><b>BackUpBot</b></div>
-                    <p class="slide-desc">Od teraz wszytskie wiadomości wysłane na twoim serwerze są kopiowane do bezpiecznej bazy danych, byś mógł je w każdej chwili odzyskać.!</p>
-                    <a href="#backupbot2"><div class="slide-button">Więcej</div></a>
+                    <table>
+                      <tr>
+                        <td style="width:29vw; height:39vw">
+                          <img src="BackUpBot.png" class="desc-pic">
+                        </td>
+                        <td style="width:29vw; height:39vw">
+                          <span class="slide-title1">BackUpBot</span>
+                          <p style="font-size: 2vw; color:#ABABAB; padding-right: 1vw">Od teraz wszytskie wiadomości wysłane na twoim serwerze są kopiowane do bezpiecznej bazy danych, byś mógł je w każdej chwili odzyskać!!!</p>
+                          <a href="#backupbot2"><div class="slide-button">Więcej</div></a>
+                        </td>
+                      </tr>
+                    </table>
                   </div>
                   <div id="slide-9">
-                    <image src="ModeratorBot.png" class="desc-pic"></image>
-                    <div class="slide-title4"><b>ModeratorBot</b></div>
-                    <p class="slide-desc">Moderator Bot, zapewnia usługę planowania streamów, chatu online dla tegoż streama (zamyka się po zakończeniu streama), oraz piękny backup czatu.</p>
-                    <a href="#moderatorbot2"><div class="slide-button">Więcej</div></a>
+                    <table>
+                      <tr>
+                        <td style="width:29vw; height:39vw">
+                          <img src="ModeratorBot.png" class="desc-pic">
+                        </td>
+                        <td style="width:29vw; height:39vw">
+                          <span class="slide-title1">ModeratorBot</span>
+                          <p style="font-size: 2vw; color:#ABABAB; padding-right: 1vw">Moderator Bot, zapewnia usługę planowania streamów, chatu online dla tegoż streama (zamyka się po zakończeniu streama), oraz piękny backup czatu. Ma też wbudowane filtrowanie wiadmości!!!</p>
+                          <a href="#moderatorbot2"><div class="slide-button">Więcej</div></a>
+                        </td>
+                      </tr>
+                    </table>
                   </div>
                   <div id="slide-10">
-                    <image src="HTML.png" class="desc-pic2"></image>
-                    <div class="slide-title5"><b>HTML Templates</b></div>
-                    <p class="slide-desc">W tym repozytorium znajdziesz różne wzorce w języku HTML (np CV). Możesz je dowolnie pobierać i przerabiać, bez przypisywania mi jakichkolwiek zasług. Znajdziesz tam też pliki tej strony!!!</p>
-                    <a href="#htmltemplates2"><div class="slide-button">Więcej</div></a>
+                    <table>
+                      <tr>
+                        <td style="width:29vw; height:39vw">
+                          <img src="HTML.png" class="desc-pic">
+                        </td>
+                        <td style="width:29vw; height:39vw">
+                          <span class="slide-title1">HTML Templates</span>
+                          <p style="font-size: 2vw; color:#ABABAB; padding-right: 1vw">W tym repozytorium znajdziesz różne wzorce w języku HTML (np CV). Możesz je dowolnie pobierać i przerabiać, bez przypisywania mi jakichkolwiek zasług. Znajdziesz tam też pliki tej strony!!!</p>
+                          <a href="#htmltemplates2"><div class="slide-button">Więcej</div></a>
+                        </td>
+                      </tr>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -294,8 +361,7 @@
                 <a class="title2"><b>DnDBot</b></a>
               </div>
               <image src="DnDBot.png" class="pic"></image>
-              <p class="desc">Ten bot zawiera ulepszenia do DnD! Możesz: rzucać kostką, tworzyć własne kanały dla swoich gier (tylko dla posiadaczy specjalnej roli, pytaj admina)
-                i zapraszać ludzi by z tobą zagrali!<br>
+              <p class="desc">Ten bot zawiera ulepszenia do DnD! Możesz: rzucać kostką, tworzyć własne kanały dla swoich gier (tylko dla posiadaczy specjalnej roli, pytaj admina) i zapraszać ludzi by z tobą zagrali!<br>
                 <br>
                 By stworzyć pokój do gry (rola 'game-master' jest wymagana)<br>
                 1. wpisz !sgame 'nazwa' by stworzyć kanał i kanał głosowy oraz kanał tylko dla game mastera<br>
@@ -307,8 +373,7 @@
                 1. by zdobyć rolę wpisz !waiting<br>
                 2. by jej się pozbyć wpisz !notwaiting<br>
                 <br>
-                Reagowanie na wiadomość wysłaną na kanał 'class' da ci rolę w zależności od emotki 
-                (używaj by zaznaczyć twoją ulubioną klasę postaci)<br>
+                Reagowanie na wiadomość wysłaną na kanał 'class' da ci rolę w zależności od emotki (używaj by zaznaczyć twoją ulubioną klasę postaci)<br>
                 1. by pozbyć się roli (już nie lubisz tej klasy) wpisz !del 'Rola' (uważaj na duże litery)<br>
                 !!!UWAGA!!!: by ta opcja działałą serwer potrzebuje emoji nazwanych tak ja na wiadomosci [czyli wszystkie klasy postaci (bez tych z dodatków), pamiętaj by wszystko napisać małą literą]<br>
                 !!!UWAGA!!!: za każdym razem gdy bot jest restartowany wysyała wiadomość na kanał class jeszcze raz<br>
@@ -337,15 +402,14 @@
                 <a class="title2"><b>SpottedBot</b></a>
               </div>
               <image src="SpottedBot.png" class="pic"></image>
-              <p class="desc">Ten bot tworzy infrastrukturę spotted na twoim serwerze
-                gdy dołączy do serwera stworzy dwa kanały i jedną rolę<br>
+              <p class="desc">Ten bot tworzy infrastrukturę spotted na twoim serwerze gdy dołączy do serwera stworzy dwa kanały i jedną rolę<br>
                 <br>
-                1. kanał Spotted 	- bot wysyła tutaj anonimowe wiadomosci po użyciu komendy /spotted<br>
+                1. kanał Spotted - bot wysyła tutaj anonimowe wiadomosci po użyciu komendy /spotted<br>
                 <br>
-                2. kanał Logs 		- tylko administrator widzi ten kanał<br>
-                      - tutaj zbierane są logi z kanału spotted<br>
-                      - to twoja jedyna opcja ny ukarać trolli<br>
-                3. Rola cholernego Trola	- ta rola piętnuje i zabrania użytkownikom używania komendy spotted<br>
+                2. kanał Logs - tylko administrator widzi ten kanał<br>
+                - tutaj zbierane są logi z kanału spotted<br>
+                - to twoja jedyna opcja ny ukarać trolli<br>
+                3. Rola cholernego Trola - ta rola piętnuje i zabrania użytkownikom używania komendy spotted<br>
                 ######################################################################<br>
                 Inne komendy<br>
                 <br>
@@ -363,7 +427,7 @@
                 1. kanał nsfw - dokładnie taki jak spotted ale do materiałów nsfw (nie widzoczny bez roli)<br>
                 2. rola nsfw-spotter - pozwala użytkownikom zobaczyć kanał nsfw (sam decydujesz kto ma dostęp)<br>
                   <a href="https://github.com/Abstergo2003/spotted-bot-worldwide" style="text-decoration:none; -webkit-tap-highlight-color: none;color: #ABABAB" target="_blank">
-                    <div class="hyperlink">Repozytorium</div>
+                    <div class="hyperlink">Rezpozytorium</div>
                   </a>
                 </p>
 
@@ -371,8 +435,7 @@
                   <a class="title2"><b>BackUpBot</b></a>
                 </div>
                 <image src="BackUpBot.png" class="pic"></image>
-                <p class="desc">Cześć,
-                  Z tej strony BackUp Bot, od teraz wszytskie wiadomości wysłane na twoim serwerze są kopiowane do bezpiecznej bazy danych, byś mógł je w każdej chwili odzyskać.<br>
+                <p class="desc">Cześć, Z tej strony BackUp Bot, od teraz wszytskie wiadomości wysłane na twoim serwerze są kopiowane do bezpiecznej bazy danych, byś mógł je w każdej chwili odzyskać.<br>
                   <br>
                   Komendy:<br>
                   /gbackup - generuje surowy plik kopii zapasowej który zawiera: text wiadomości, id nadawcy, i link do jego zdjęcia profilowego(wytłumaczę później)<br>
@@ -391,7 +454,7 @@
                   <a class="title2"><b>ModeratorBot</b></a>
                 </div>
                 <image src="ModeratorBot.png" class="pic"></image>
-                <p class="desc">Cześć,<br>
+                <p class="desc">
                   Moderator Bot, zapewnia usługę planowania streamów, chatu online dla tegoż streama (zamyka się po zakończeniu streama), oraz piękny backup czatu.<br>
                   <br>
                   Komendy:<br>
@@ -426,13 +489,13 @@
                     <div class="hyperlink">Repozytorium</div>
                   </a>
                 </p>
+        </div>
           </div>
-          <script type="text/javascript">
-            window.onload = function() {
-                document.location.hash = "";
-            }
-        </script>
-            </main>
+          <script src="onload.js"></script>
+          <script src="color.js"></script>
+          <script src="color2.js"></script>
+        
+        </main>
 
         </div>
     </body>

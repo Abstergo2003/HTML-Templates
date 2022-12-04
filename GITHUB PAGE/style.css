@@ -107,8 +107,6 @@ body {
 }
 .desc-pic {
     width: 20vw;
-    position: absolute;
-    left: 3vw;
 }
 .desc-pic2 {
     width: 20vw;
@@ -117,37 +115,6 @@ body {
     border-radius: 50%;
 }
 .slide-title1 {
-    position: absolute;
-    left: 37vw;
-    top: 4vw;
-    font-size: 3vw;
-    color: #ABABAB;
-}
-.slide-title2 {
-    position: absolute;
-    left: 33vw;
-    top: 4vw;
-    font-size: 3vw;
-    color: #ABABAB;
-}
-.slide-title3 {
-    position: absolute;
-    left: 33vw;
-    top: 4vw;
-    font-size: 3vw;
-    color: #ABABAB;
-}
-.slide-title4 {
-    position: absolute;
-    left: 33vw;
-    top: 4vw;
-    font-size: 3vw;
-    color: #ABABAB;
-}
-.slide-title5 {
-    position: absolute;
-    left: 30vw;
-    top: 4vw;
     font-size: 3vw;
     color: #ABABAB;
 }
