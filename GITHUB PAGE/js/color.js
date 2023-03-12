@@ -3,7 +3,6 @@ function color(clicked_id) {
     var nav2 = document.getElementById("nav2")
     var nav3 = document.getElementById("nav3")
     var nav4 = document.getElementById("nav4")
-    var nav5 = document.getElementById("nav5")
     var navclick = document.getElementById(clicked_id)
 
     nav1.style.background = "#DADADA"
@@ -17,9 +16,6 @@ function color(clicked_id) {
     
     nav4.style.background = "#DADADA"
     nav4.style.color = "#222322"
-    
-    nav5.style.background = "#DADADA"
-    nav5.style.color = "#222322"
     
     navclick.style.background = "#222322"
     navclick.style.color = "#DADADA"

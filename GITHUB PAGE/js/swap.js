@@ -2,8 +2,8 @@ function swap() {
     // Get the checkbox
     var checkBox = document.getElementById("myCheck");
     // Get the output text
-    var text = document.getElementById("polska");
-    var text2 = document.getElementById("anglia");
+    var text = document.getElementById("pl");
+    var text2 = document.getElementById("en");
   
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){

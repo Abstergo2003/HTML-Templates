@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <table id="stats">
+        <tr style="text-align: center;">
+            <td></td>
+            <td id="score">0</td>
+            <td></td>
+        </tr>
+        <tr style="text-align: center;" id="desc">
+            <td>Apples</td>
+            <td>Length</td>
+            <td>Walls</td>
+        </tr>
+        <tr style="text-align: center;">
+            <td id="apples">0</td>
+            <td id="length">50</td>
+            <td id="walls">0</td>
+        </tr>
+    </table>
+    <div class="clear"><div id="clear">Clear</div><div id="cost">5</div></div>
+    <table id="controls">
+        <tr>
+            <td></td>
+            <td><button id="up" onclick="change_dir('up')">></button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button id="left" onclick="change_dir('left')"><</button></td>
+            <td></td>
+            <td><button id="right" onclick="change_dir('right')">></button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="down" onclick="change_dir('down')">></button></td>
+            <td></td>
+        </tr>
+    </table>
+    <div id="selfHit">You hit yourself!!!</div>
+    <div id="wallHit">You hit the border!!!</div>
+    <div id="reload">Restart</div>
+    <script src="js/index.js"></script>
+</body>
+</html>

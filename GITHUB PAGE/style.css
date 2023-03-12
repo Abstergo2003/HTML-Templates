@@ -6,12 +6,15 @@ body {
     background: white;
     margin: 0;
     padding: 0;
+    text-align: center;
+    margin-bottom: 100px;
 }
 .starting-div {
     background-color: #222322;
     width: 100%;
     text-align: center;
     overflow: auto;
+    align-items: center;
 }
 .title {
     float: left;
@@ -30,10 +33,9 @@ body {
     font-size: 1vw;
 }
 .profile {
-    width: 20vw;
-    border-style: solid;
-    border-radius: 50%;
-    border-color:transparent;
+    width: 200px;
+    height: 200px;
+    margin: auto;
 }
 .slider {
     width: 60vw;
@@ -42,68 +44,87 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vw;
+    position: relative;
 }
 .slides {
-    display: flex;
-    position: relative;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    
-    
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    
-    /*
-    scroll-snap-points-x: repeat(300px);
-    scroll-snap-type: mandatory;
-    */
-}
-.slides::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-.slides::-webkit-scrollbar-thumb {
-    background: #222322;
-    border-radius: 10px;
-}
-.slides::-webkit-scrollbar-track {
-    background: transparent;
-}
-.slides > div {
-    scroll-snap-align: start;
-    flex-shrink: 0;
+    display: block;
     width: 60vw;
     height: 40vw;
-    margin-right: 50px;
-    border-radius: 10px;
-    background: #222322;
-    transform-origin: center center;
-    transform: scale(1);
-    transition: transform 0.5s;
     position: relative;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
+    scroll-behavior: smooth;
+    overflow: hidden;
 }
-.slider > a {
-    display: inline-flex;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: #ABABAB;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 0 0 0.5rem 0;
-    position: relative;
+#slide1 {
+    width: 60vw;
+    height: 40vw;
+    position: absolute;
+    left: 0;
+    scroll-behavior: smooth;
+    background-color: #222322;
+    transition: all 0.3s ease-in-out;
 }
-.slider > a:active {
-    top: 1px;
+#slide2 {
+    width: 60vw;
+    height: 40vw;
+    position: absolute;
+    left: 60vw;
+    scroll-behavior: smooth;
+    background-color: #222322;
+    transition: all 0.3s ease-in-out;
 }
-.slider > a:focus {
-    background: #222322;
+#slide3 {
+    width: 60vw;
+    height: 40vw;
+    position: absolute;
+    scroll-behavior: smooth;
+    background-color: #222322;
+    left: 120vw;
+    transition: all 0.3s ease-in-out;
+}
+#slide4 {
+    width: 60vw;
+    height: 40vw;
+    position: absolute;
+    scroll-behavior: smooth;
+    background-color: #222322;
+    left: 180vw;
+    transition: all 0.3s ease-in-out;
+}
+#slide5 {
+    width: 60vw;
+    height: 40vw;
+    position: absolute;
+    scroll-behavior: smooth;
+    background-color: #222322;
+    left: 0vw;
+    transition: all 0.3s ease-in-out;
+}
+#slide6 {
+    width: 60vw;
+    height: 40vw;
+    position: absolute;
+    scroll-behavior: smooth;
+    background-color: #222322;
+    left: 60vw;
+    transition: all 0.3s ease-in-out;
+}
+#slide7 {
+    width: 60vw;
+    height: 40vw;
+    position: absolute;
+    scroll-behavior: smooth;
+    background-color: #222322;
+    left: 120vw;
+    transition: all 0.3s ease-in-out;
+}
+#slide8 {
+    width: 60vw;
+    height: 40vw;
+    position: absolute;
+    scroll-behavior: smooth;
+    background-color: #222322;
+    left: 180vw;
+    transition: all 0.3s ease-in-out;
 }
 .desc-pic {
     width: 20vw;
@@ -254,4 +275,57 @@ body {
     height: 100%;
     background-color: #222322;
     overflow: auto;
+}
+.outer {
+    width: 95%;
+    background-color: #222322;
+    text-align: center;
+    margin-left: 2.5%;
+    margin-top: 60px;
+    border: 5px solid #222322
+}
+.main_logo {
+    width: 300px;
+}
+.inner {
+    width: 100%;
+    background-color: #393a39;
+    padding-bottom: 30px;
+}
+.inner img {
+    width: 250px;
+    margin: 15px;
+}
+.inner td {
+    color: #e5e5e5;
+}
+.desc_div {
+    width: 91.65%;
+    margin-left: 2.5%;
+    margin-top: 0;
+    background-color: #222322;
+    color: #e5e5e5;
+    font-size: 20px;
+    border-top: none;
+    text-align: left;
+}
+.test {
+    display: none;
+    width: 91.65%;
+    margin-left: 2.5%;
+    margin-top: 0;
+    background-color: #222322;
+    color: #e5e5e5;
+    font-size: 20px;
+    border-top: none;
+    text-align: left;
+    padding: 2%;
+    border-top: none;
+    text-align: left;
+    font-size: 20px;
+    height: 50px;
+}
+#dc_desc, #chrome_desc, #mobile_desc, #html_desc, #dc_desc2, #chrome_desc2, #mobile_desc2, #html_desc2 {
+    height: 0;
+    transition: all 0.3s ease-in-out;
 }
