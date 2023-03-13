@@ -180,10 +180,13 @@ function randomObstacle() {
             console.log('too close to apple')
             return 0
         }
-        let randomRecHeight = Math.floor(Math.random()*90) + 10 //max 40 min 10
-        let randomRecWidth = Math.floor(Math.random()*90) + 10 //max 40 min 10
+        let randomRecHeight = Math.floor(Math.random()*90) + 10 //max 100 min 10
+        let randomRecWidth = Math.floor(Math.random()*90) + 10 //max 100 min 10
         ctx.fillStyle = 'rgb(255, 255, 255)'
         ctx.fillRect(randomXRec, randomYRec, randomRecWidth, randomRecHeight)
+    }
+    if (stopGame == 1) {
+        clearInterval(intervalObstacle);
     }
 }
 function delay(time) {
@@ -199,5 +202,20 @@ const intervalDraw = setInterval(draw, 1000 / 60);
 const intervalDeDraw = setInterval(dedraw, 1000 / 60)
 const intervalChecker = setInterval(checker, 1000 / 60)
 const intervalObstacle = setInterval(randomObstacle, 9000)
-
+function checkKey(e) {
+    console.log(e.keyCode)
+    e = e || window.event
+    if (e.keyCode == '38') {
+        change_dir('up')
+    } else if (e.keyCode == '40') {
+        change_dir('down')
+    } else if (e.keyCode == '37') {
+        change_dir('left')
+    } else if (e.keyCode == '39') {
+        change_dir('right')
+    } else if (e.keyCode == '96') {
+        clearMap()
+    }
+}
+document.onkeydown = checkKey
   
